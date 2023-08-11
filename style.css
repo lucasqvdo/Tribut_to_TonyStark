@@ -10,6 +10,7 @@ body {
   justify-content: center;
   margin: 10px;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .carrossel {
@@ -38,4 +39,50 @@ img {
 
 footer {
   background-color: gray;
+}
+
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.toggle-container {
+  display: inline-block;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s;
+}
+
+.toggle:checked + .toggle-label {
+  background-color: #4CAF50;
+}
+
+.toggle:checked + .toggle-label:before {
+  left: 20px;
 }
