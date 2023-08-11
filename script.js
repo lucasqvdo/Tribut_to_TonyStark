@@ -10,11 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(carrossel, 1800);
-});
 
+  var darkModeToggle = document.getElementById("dark-mode-toggle");
 
-var darkModeToggle = document.getElementById("dark-mode-toggle");
-
-darkModeToggle.addEventListener("change", function() {
-  document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+  darkModeToggle.addEventListener("change", function() {
+    document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+  });
 });
